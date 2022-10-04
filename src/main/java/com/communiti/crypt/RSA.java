@@ -5,6 +5,7 @@ import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 
+//public key and private key generator of any user
 public class RSA {
 	
 	private PrivateKey privateKey;

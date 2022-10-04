@@ -7,6 +7,8 @@ import java.util.Base64;
 import javax.crypto.Cipher;
 
 public class Crypt {
+	
+	//Encrypt a message using public key
 	public String encrypt(String msg, PublicKey publicKey) throws Exception {
 		byte[] msgToByte = msg.getBytes();
 		Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
@@ -19,6 +21,7 @@ public class Crypt {
 		return Base64.getEncoder().encodeToString(data);
 	}
 	
+	//Decrypt a message using public key
 	public String decrypt(String encryptedMsg, PrivateKey privateKey) throws Exception {
 		byte[] msgToByte = decode(encryptedMsg);
 		Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
